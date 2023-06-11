@@ -1,16 +1,17 @@
+import java.time.LocalDateTime;
+
 public class Trip {
 
 private String source;
 private String destination;
-private String hours;
+private Long duration;
 private Double price;
-private String startDate;
-private String returnDate;
+private LocalDateTime startDate;
+private LocalDateTime returnDate;
 
-    public Trip(String source, String destination, Double price, String startDate, String returnDate, String hours) {
+    public Trip(String source, String destination, Double price, LocalDateTime startDate, LocalDateTime returnDate) {
         this.source = source;
         this.destination = destination;
-        this.hours = hours;
         this.price = price;
         this.startDate = startDate;
         this.returnDate = returnDate;
@@ -24,19 +25,19 @@ private String returnDate;
         return destination;
     }
 
-    public String getHours() {
-        return hours;
+    public Long getDuration() {
+        return duration;
     }
 
     public Double getPrice() {
         return price;
     }
 
-    public String getStartDate() {
+    public LocalDateTime getStartDate() {
         return startDate;
     }
 
-    public String getReturnDate() {
+    public LocalDateTime getReturnDate() {
         return returnDate;
     }
 
@@ -45,7 +46,7 @@ private String returnDate;
         return "Trip{" +
                 "source='" + source + '\'' +
                 ", destination='" + destination + '\'' +
-                ", hours='" + hours + '\'' +
+                ", hours='" + duration + '\'' +
                 ", price=" + price +
                 ", startDate='" + startDate + '\'' +
                 ", returnDate='" + returnDate + '\'' +
